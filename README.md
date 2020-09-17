@@ -34,6 +34,10 @@ Tests are written with `rspec`. To run tests:
 
 `rspec`
 
+To check styles with rubocop run:
+
+`rubocop`
+
 #### Features of the parser app
 
 - Modular and maintainable structure
@@ -47,18 +51,26 @@ Tests are written with `rspec`. To run tests:
 Successfull parser's run output example:
 
 ```
--=Visits=-
+Visits
 /about/2 90 visits
 /contact 89 visits
 /index 82 visits
 /about 81 visits
 /help_page/1 80 visits
 /home 78 visits
--=Users=-
+Users
 /index 23 unique views
 /home 23 unique views
 /contact 23 unique views
 /help_page/1 23 unique views
 /about/2 22 unique views
-/about 21 unique views```
+/about 21 unique views
+Average
+/about/2 4 user per view
+/about 3 user per view
+/index 3 user per view
+/home 3 user per view
+/contact 3 user per view
+/help_page/1 3 user per view
+```
 
