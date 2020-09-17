@@ -28,12 +28,15 @@ describe Parser do
     let(:file) { file_path }
 
     it 'outputs metrics' do
-      report = ['-=Visits=-',
+      report = ['Visits',
                 '/contact 4 visits',
                 '/help_page/1 2 visits',
-                '-=Users=-',
+                'Users',
                 '/contact 3 unique views',
-                "/help_page/1 2 unique views\n"].join("\n")
+                '/help_page/1 2 unique views',
+                'Average',
+                '/contact 1 user per view',
+                "/help_page/1 1 user per view\n"].join("\n")
       expect { Parser.new(file).run }.to output(report).to_stdout
     end
   end
